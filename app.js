@@ -1,9 +1,11 @@
+require("dotenv").config();
+
 const express       = require('express'),
         app         = express(),
         bodyParser  = require('body-parser'),
         mongoose    = require('mongoose'),
-        password    = 'iMock@2020',
-        username    = 'iMock_db'
+        password    = process.env.PASSWORD,
+        username    = process.env.USERNAME,
         myRoutes = require('./routes');
 
 
